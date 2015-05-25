@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_extensions',
     'content',
+    'scrapers',
     'djcelery',
 )
 
@@ -110,3 +111,8 @@ STATIC_URL = '/static/'
 
 import djcelery
 djcelery.setup_loader()
+
+CELERY_ACCEPTED_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIME_ZONE = 'UTC'
