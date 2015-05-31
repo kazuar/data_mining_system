@@ -116,3 +116,6 @@ CELERY_ACCEPTED_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 # CELERY_TIME_ZONE = 'UTC'
+
+from utils import mongo_utils
+mongodb_connection = mongo_utils.MongodbConnection().connection
