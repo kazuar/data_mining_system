@@ -15,3 +15,18 @@ class TwitterScraper(object):
         auth = tweepy.OAuthHandler(access_key_settings["api_key"], access_key_settings["api_secret"])
         auth.set_access_token(access_key_settings["access_token"], access_key_settings["access_token_secret"])
         return auth
+
+    def search_poi(self, poi_data):
+        return None
+
+    def match_poi(self, poi_data, search_results):
+        return None
+
+    def get_poi(self, poi_data):
+        return None
+
+    def find_poi(self, poi_data):
+        search_results = self.search_poi(poi_data)
+        matching_result = self.match_poi(poi_data, search_results)
+        pois_data = self.get_poi(matching_result)
+        return pois_data
