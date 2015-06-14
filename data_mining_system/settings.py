@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'content',
     'scrapers',
+    'client',
     'djcelery',
 )
 
